@@ -9,13 +9,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [12.x]
         os: [windows-latest]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v1
       - name: Run node.js on latest Windows.
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
